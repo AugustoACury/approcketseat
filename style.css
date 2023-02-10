@@ -1,0 +1,123 @@
+/* o asterisco sozinho está pedindo para que a regra seja aplicada em todos os elementos em html*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #09090A;
+    color: white;
+
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+/*o justify-content vai pegar todo a largura do header e vai justificar com space-between com espaço vazio entre os elementos encontrados no header*/
+    justify-content: space-between;
+/*padding é preenchimento interno*/
+    padding: 48px;
+/*O cabeçalho fica fixo*/
+    position: fixed;
+
+    width: 100%;
+    
+}
+
+button {
+    padding: 16px 24px;
+/*arredondamento de borda*/
+    border-radius: 8px;
+    border: 1px solid #8B5CF6;
+    background-color: transparent;
+    color: white;
+
+/*display significa a disposição ddos elemento dentro de um elemento*/
+/*o flex vai flexibilizar os elementos dentro do botão para alinharmos depois como quisermos*/
+    display: flex;
+    align-items: center;
+/*gap vai definir o espaço entre os elementos dentro do botão*/
+    gap: 12px;
+
+/*linkando a font que está no head e dando as propriedades da font*/
+    font-family: 'Inter';
+    font-weight: 600;
+    line-height: 125%;
+}
+
+#form-habits{
+/*o display flex tbm é usado para deixar um elemento ao lado de outro*/
+display: flex;
+padding: 182px 48px 48px;
+width: fit-content;
+}
+
+.habits {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.habit {
+    width: 64px;
+    height: 64px;
+
+    font-size: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.days {
+    display: flex;
+    gap: 48px;
+    margin-left: 32px;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.day div {
+    margin-bottom: 8px;
+
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #A1A1AA;
+
+    text-align: center;
+}
+
+input{
+/*o appearance: none; significa que o imput que colocamos no HTML está flexivel agora para moldarmos ele */
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 64px;
+    height: 64px;
+
+    border: 2px solid #27272A;
+    border-radius: 8px;
+
+    background: #18181B;
+}
+
+input:checked {
+    background: #8B5CF6;
+    border: 2px solid #A78BFA;
+}
+
+@media (max-width: 570px) {
+    button div {
+        display: none;
+    }
+}
